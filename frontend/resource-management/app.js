@@ -99,7 +99,7 @@
         <div class="gate-details">
           <div class="gate-flight">${safe(gate.flight)}</div>
           <div class="gate-route">${safe(gate.route)}<br>${safe(gate.window)}</div>
-          <div class="gate-card-foot"><span>Resource ID: ${safe(gate.id)}</span><button type="button" data-gate-edit="${safe(gate.id)">Manage →</button></div>
+          <div class="gate-card-foot"><span>Resource ID: ${safe(gate.id)}</span><button type="button" data-gate-edit="${safe(gate.id)}">Manage →</button></div>
         </div>
       </article>`).join("");
     $("#gateEmpty").classList.toggle("hidden", filtered.length !== 0);
