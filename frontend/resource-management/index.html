@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Airport Operations Coordination Engine — Gates, Staff and Resource Management demo module.">
+  <meta name="description" content="Airport Operations Coordination Engine — Gates, Staff and Resource Management.">
   <title>Airport Operations | Gates & Resource Management</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -23,7 +23,7 @@
         <a class="nav-link" href="#resources"><span class="nav-icon">◫</span>Resource overview</a>
       </nav>
       <div class="sidebar-spacer"></div>
-      <div class="system-status"><span class="status-dot"></span><span><strong>Demo environment</strong><small>Sample data only</small></span></div>
+      <div class="system-status"><span class="status-dot"></span><span><strong>Resource workspace</strong><small>Operations overview</small></span></div>
       <div class="sidebar-footer">AIRPORT OPERATIONS<br><span>RESOURCE CONTROL · V1.0</span></div>
     </aside>
 
@@ -31,7 +31,7 @@
       <header class="topbar">
         <button class="icon-button menu-button" id="menuButton" aria-label="Toggle navigation">☰</button>
         <div class="breadcrumb">Operations <span>/</span> <strong>Gates & Staff</strong></div>
-        <div class="topbar-right"><span class="live-pill"><i></i> DEMO MODE</span><div class="avatar">OP</div><div class="operator"><strong>Operations User</strong><small>Resource Management</small></div></div>
+        <div class="topbar-right"><span class="live-pill"><i></i> OPERATIONS</span><div class="avatar">OP</div><div class="operator"><strong>Operations User</strong><small>Resource Management</small></div></div>
       </header>
 
       <section class="content" id="overview">
@@ -41,25 +41,25 @@
             <div class="eyebrow"><span class="eyebrow-line"></span> AIRPORT OPERATIONS COORDINATION ENGINE</div>
             <h1>Gates, Staff &<br><span>Resource Management</span></h1>
             <p>One operational view for gate availability, staff readiness and resource allocation.</p>
-            <div class="hero-meta"><span>◷ &nbsp; Operations overview</span><span class="hero-separator">•</span><span>Demo data · Not connected to live airport systems</span></div>
+            <div class="hero-meta"><span>◷ &nbsp; Operations overview</span><span class="hero-separator">•</span><span>Illustrative data · Not connected to live airport systems</span></div>
           </div>
           <div class="hero-chip"><span class="plane-chip">✈</span><span><small>RESOURCE CONTROL</small><strong>Operational visibility</strong></span></div>
         </div>
 
         <div class="section-heading">
           <div><div class="section-kicker">AT A GLANCE</div><h2>Resource overview</h2></div>
-          <div class="date-chip"><span>◷</span> Illustrative demo snapshot</div>
+          <div class="date-chip"><span>◷</span> Resource snapshot</div>
         </div>
 
         <section class="metrics-grid" aria-label="Resource summary">
-          <article class="metric-card metric-blue"><div class="metric-top"><span>Total gates</span><span class="metric-icon">▣</span></div><div class="metric-value" id="totalGates">24</div><div class="metric-bottom"><span>Configured in demo</span><span class="metric-symbol">↗</span></div></article>
+          <article class="metric-card metric-blue"><div class="metric-top"><span>Total gates</span><span class="metric-icon">▣</span></div><div class="metric-value" id="totalGates">24</div><div class="metric-bottom"><span>Configured gates</span><span class="metric-symbol">↗</span></div></article>
           <article class="metric-card metric-green"><div class="metric-top"><span>Available gates</span><span class="metric-icon">✓</span></div><div class="metric-value" id="availableGates">10</div><div class="metric-bottom"><span><i class="tiny-dot green"></i> Ready for allocation</span><span id="availablePercent">42%</span></div></article>
           <article class="metric-card metric-amber"><div class="metric-top"><span>Occupied gates</span><span class="metric-icon">✈</span></div><div class="metric-value" id="occupiedGates">12</div><div class="metric-bottom"><span><i class="tiny-dot amber"></i> In active use</span><span id="occupiedPercent">50%</span></div></article>
           <article class="metric-card metric-red"><div class="metric-top"><span>Unavailable gates</span><span class="metric-icon">!</span></div><div class="metric-value" id="unavailableGates">2</div><div class="metric-bottom"><span><i class="tiny-dot red"></i> Needs attention</span><span id="unavailablePercent">8%</span></div></article>
         </section>
 
         <section class="section-block" id="gates">
-          <div class="section-heading compact"><div><div class="section-kicker">GATE CONTROL</div><h2>Gate status overview</h2><p class="section-subtitle">Review current demo status and inspect individual gate details.</p></div><button class="text-button" id="showAllGates">View all gates <span>→</span></button></div>
+          <div class="section-heading compact"><div><div class="section-kicker">GATE CONTROL</div><h2>Gate status overview</h2><p class="section-subtitle">Review gate status and inspect individual gate details.</p></div><button class="text-button" id="showAllGates">View all gates <span>→</span></button></div>
           <div class="filter-row">
             <label class="search-box"><span>⌕</span><input id="gateSearch" type="search" placeholder="Search gate, flight or terminal..." aria-label="Search gates"></label>
             <div class="filter-buttons" role="group" aria-label="Filter gates">
@@ -71,7 +71,7 @@
           </div>
           <div class="gate-grid" id="gateGrid"></div>
           <div class="empty-state hidden" id="gateEmpty">No gates match your search. Try another gate ID or filter.</div>
-          <div class="table-foot"><span id="gateResultCount">Showing 8 demo gates</span><span>Gate states are illustrative sample data.</span></div>
+          <div class="table-foot"><span id="gateResultCount">Showing 8 gates</span><span>Gate states are illustrative sample data.</span></div>
         </section>
 
         <section class="lower-grid">
@@ -85,7 +85,7 @@
             </div>
             <div class="table-tools"><label class="search-box staff-search"><span>⌕</span><input id="staffSearch" type="search" placeholder="Search staff or ID..." aria-label="Search staff"></label><select id="staffStatusFilter" aria-label="Filter staff by status"><option value="All">All statuses</option><option>Available</option><option>On Duty</option><option>On Break</option></select></div>
             <div class="table-wrap"><table><thead><tr><th>STAFF MEMBER</th><th>ROLE</th><th>STATUS</th><th>ALLOCATION</th><th>SHIFT</th><th></th></tr></thead><tbody id="staffTableBody"></tbody></table></div>
-            <div class="table-foot"><span id="staffResultCount">Showing demo staff</span><span>Names and assignments are fictional.</span></div>
+            <div class="table-foot"><span id="staffResultCount">Showing staff records</span><span>Names and assignments are fictional.</span></div>
           </div>
 
           <div class="right-column">
@@ -103,10 +103,10 @@
                 <button class="quick-action" id="exportCsv"><span class="quick-icon">⇩</span><strong>Export data</strong><small>Download CSV</small></button>
               </div>
             </section>
-            <section class="notice-panel"><span class="notice-icon">✦</span><div><strong>Resource control principle</strong><p>Confirm resource availability before making operational assignments. This demo does not dispatch flights or connect to airport systems.</p></div></section>
+            <section class="notice-panel"><span class="notice-icon">✦</span><div><strong>Resource control principle</strong><p>Confirm resource availability before making operational assignments. This interface does not dispatch flights or connect to airport systems.</p></div></section>
           </div>
         </section>
-        <footer class="page-footer"><span>Airport Operations Coordination Engine <b>·</b> Resource Management</span><span>Resource Management <b>·</b> Frontend demo v1.0</span></footer>
+        <footer class="page-footer"><span>Airport Operations Coordination Engine <b>·</b> Resource Management</span><span>Resource Management <b>·</b> v1.0</span></footer>
       </section>
     </main>
   </div>
@@ -116,8 +116,8 @@
       <div class="modal-top"><div><div class="section-kicker">RESOURCE WORKSPACE</div><h2 id="modalTitle">Update resource</h2></div><button type="button" class="modal-close" id="closeModal" aria-label="Close dialog">×</button></div>
       <p class="modal-description" id="modalDescription">Update a sample record. Changes stay in this browser session.</p>
       <div id="modalFields" class="modal-fields"></div>
-      <div class="modal-actions"><button type="button" class="secondary-button" id="cancelModal">Cancel</button><button type="submit" class="primary-button">Save demo change</button></div>
-      <p class="modal-footnote">Demo only — this does not update an airport backend.</p>
+      <div class="modal-actions"><button type="button" class="secondary-button" id="cancelModal">Cancel</button><button type="submit" class="primary-button">Save changes</button></div>
+      <p class="modal-footnote">Changes are local to this browser and do not update an airport backend.</p>
     </form>
   </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
