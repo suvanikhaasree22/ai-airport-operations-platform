@@ -1,6 +1,6 @@
 # Gates, Staff & Resource Management
 
-Owner: Suvanikhaa Sree  
+Team: Airport Operations Coordination Engine project team  
 Project: Airport Operations Coordination Engine  
 Stack: HTML + CSS + JavaScript
 
