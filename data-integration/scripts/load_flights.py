@@ -2,9 +2,9 @@ import csv
 import sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
-DB_PROJECT = ROOT.parent.parent / 'airport-data-integration'
-sys.path.insert(0, str(DB_PROJECT.parent))
-from airport_data_integration.database.db import get_connection
+DB_PROJECT = ROOT.parent / 'airport-data-integration'
+sys.path.insert(0, str(DB_PROJECT))
+from database.db import get_connection
 CSV_PATH = ROOT / 'data' / 'synthetic' / 'flights.csv'
 def load_flights():
     with CSV_PATH.open(encoding='utf-8-sig',newline='') as f:
