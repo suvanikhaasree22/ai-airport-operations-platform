@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 import sys
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-DB_PROJECT = ROOT / "multi-ai-airport-operations-platform" / "airport-data-integration"
+DB_PROJECT = Path(__import__("os").environ.get("AIRPORT_DB_PROJECT", str(ROOT / "multi-ai-airport-operations-platform" / "airport-data-integration")))
 if str(DB_PROJECT) not in sys.path:
     sys.path.insert(0, str(DB_PROJECT))
 
